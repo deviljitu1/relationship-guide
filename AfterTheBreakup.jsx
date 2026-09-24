@@ -33,23 +33,14 @@ export default function AfterTheBreakup() {
     <div className="w-full">
       
       {/* Introduction to the Aftermath */}
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="bg-slate-800 text-white p-10 md:p-16 rounded-[2.5rem] relative overflow-hidden shadow-2xl mb-20"
-      >
-        <div className="absolute top-0 right-0 p-12 opacity-10">
-          <Compass size={120} />
-        </div>
-        <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#38bdf8] mb-4">The Missing Piece</p>
-        <h2 className="text-3xl md:text-5xl font-serif mb-6 leading-tight">
-          What Happens After <br/> The Breakup?
+      <div className="text-center max-w-3xl mx-auto mb-16 mt-8">
+        <h2 className="font-serif text-3xl md:text-5xl mb-6 text-slate-800">
+          What Happens After The Breakup?
         </h2>
-        <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">
-          Psychologically, the story does not end at the breakup. The breakup creates a whole new phase with multiple possible paths. <strong className="text-white">Relationship ending ≠ emotional attachment ending at the same moment.</strong>
+        <p className="text-slate-600 leading-relaxed">
+          Psychologically, the story does not end at the breakup. The breakup creates a whole new phase with multiple possible paths. <strong className="text-slate-800">Relationship ending ≠ emotional attachment ending at the same moment.</strong>
         </p>
-      </motion.div>
+      </div>
 
       <SectionHeader 
         num="I" 
@@ -226,65 +217,65 @@ export default function AfterTheBreakup() {
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="bg-slate-900 rounded-[2rem] p-8 md:p-12 shadow-2xl relative overflow-hidden"
+        className="bg-slate-50 border border-slate-200 rounded-[2rem] p-8 md:p-12 shadow-sm relative overflow-hidden"
       >
-        <div className="absolute top-0 right-0 p-8 opacity-5">
-          <Map size={200} />
+        <div className="absolute top-0 right-0 p-8 opacity-5 text-slate-900 pointer-events-none">
+          <Map size={160} />
         </div>
         
-        <h3 className="text-2xl md:text-3xl font-serif text-white mb-2 text-center relative z-10">Master Psychological Map</h3>
-        <p className="text-slate-400 text-center text-sm mb-12 relative z-10">From attraction → attachment → crisis → breakup → recovery → possible futures.</p>
+        <h3 className="text-2xl md:text-3xl font-serif text-slate-800 mb-2 text-center relative z-10">Master Psychological Map</h3>
+        <p className="text-slate-500 text-center text-sm mb-12 relative z-10">From attraction → attachment → crisis → breakup → recovery → possible futures.</p>
 
         <div className="relative z-10 flex flex-col items-center max-w-4xl mx-auto space-y-6">
           
           {/* Phase 1 */}
-          <div className="bg-slate-800 border border-slate-700 px-6 py-3 rounded-full text-slate-300 text-sm font-medium">Relationship & Connection</div>
-          <div className="h-6 w-px bg-slate-700"></div>
+          <div className="bg-white border border-slate-200 px-6 py-3 rounded-full text-slate-700 text-sm font-medium shadow-sm">Relationship & Connection</div>
+          <div className="h-6 w-px bg-slate-300"></div>
           
-          <div className="bg-slate-800 border border-slate-700 px-6 py-3 rounded-full text-slate-300 text-sm font-medium">Problems & Emotional Distance</div>
-          <div className="h-6 w-px bg-slate-700"></div>
+          <div className="bg-white border border-slate-200 px-6 py-3 rounded-full text-slate-700 text-sm font-medium shadow-sm">Problems & Emotional Distance</div>
+          <div className="h-6 w-px bg-slate-300"></div>
 
-          <div className="bg-slate-800 border border-slate-700 px-6 py-3 rounded-full text-slate-300 text-sm font-medium">Outside Attraction / Boundary Decision</div>
-          <div className="h-6 w-px bg-slate-700"></div>
+          <div className="bg-white border border-slate-200 px-6 py-3 rounded-full text-slate-700 text-sm font-medium shadow-sm">Outside Attraction / Boundary Decision</div>
+          <div className="h-6 w-px bg-slate-300"></div>
 
           {/* THE BREAKUP */}
-          <div className="bg-red-500/20 border border-red-500/50 px-10 py-4 rounded-2xl text-white font-bold text-xl font-serif shadow-[0_0_30px_rgba(239,68,68,0.2)]">
+          <div className="bg-red-50 border border-red-200 px-10 py-4 rounded-2xl text-red-600 font-bold text-xl font-serif shadow-sm">
             THE BREAKUP
           </div>
           
           {/* Split Path */}
           <div className="flex w-full max-w-md justify-between px-12 relative h-12">
-            <div className="absolute top-0 left-1/2 w-1/2 h-1/2 border-l border-t border-slate-600 rounded-tl-xl -translate-x-full"></div>
-            <div className="absolute top-0 right-1/2 w-1/2 h-1/2 border-r border-t border-slate-600 rounded-tr-xl translate-x-full"></div>
+            <div className="absolute top-0 left-1/2 w-1/2 h-1/2 border-l border-t border-slate-300 rounded-tl-xl -translate-x-full"></div>
+            <div className="absolute top-0 right-1/2 w-1/2 h-1/2 border-r border-t border-slate-300 rounded-tr-xl translate-x-full"></div>
           </div>
 
           <div className="grid grid-cols-2 gap-8 md:gap-24 w-full">
             
             {/* Path 1: Separation */}
             <div className="flex flex-col items-center space-y-4">
-              <div className="bg-slate-800 border border-slate-600 px-6 py-3 rounded-xl text-white font-bold text-center w-full">Separation</div>
-              <ArrowDown className="text-slate-600" size={20}/>
-              <div className="bg-slate-800/50 border border-slate-700 px-4 py-2 rounded-lg text-slate-400 text-xs text-center w-full">Grief & Detachment</div>
-              <ArrowDown className="text-slate-600" size={20}/>
-              <div className="bg-slate-800/50 border border-slate-700 px-4 py-2 rounded-lg text-slate-400 text-xs text-center w-full">Identity Recovery</div>
-              <ArrowDown className="text-slate-600" size={20}/>
+              <div className="bg-white border border-slate-200 px-6 py-3 rounded-xl text-slate-800 font-bold text-center w-full shadow-sm">Separation</div>
+              <ArrowDown className="text-slate-400" size={20}/>
+              <div className="bg-slate-100 border border-slate-200 px-4 py-2 rounded-lg text-slate-600 text-xs text-center w-full">Grief & Detachment</div>
+              <ArrowDown className="text-slate-400" size={20}/>
+              <div className="bg-slate-100 border border-slate-200 px-4 py-2 rounded-lg text-slate-600 text-xs text-center w-full">Identity Recovery</div>
+              <ArrowDown className="text-slate-400" size={20}/>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full mt-4">
-                <div className="bg-emerald-500/10 border border-emerald-500/30 p-2 rounded text-emerald-400 text-[10px] text-center">New Relationship</div>
-                <div className="bg-blue-500/10 border border-blue-500/30 p-2 rounded text-blue-400 text-[10px] text-center">Single Life</div>
+                <div className="bg-emerald-50 border border-emerald-200 p-2 rounded text-emerald-700 text-[10px] text-center font-medium shadow-sm">New Relationship</div>
+                <div className="bg-blue-50 border border-blue-200 p-2 rounded text-blue-700 text-[10px] text-center font-medium shadow-sm">Single Life</div>
               </div>
             </div>
 
             {/* Path 2: Reconciliation */}
             <div className="flex flex-col items-center space-y-4">
-              <div className="bg-slate-800 border border-slate-600 px-6 py-3 rounded-xl text-white font-bold text-center w-full">Reconciliation</div>
-              <ArrowDown className="text-slate-600" size={20}/>
-              <div className="bg-slate-800/50 border border-slate-700 px-4 py-2 rounded-lg text-slate-400 text-xs text-center w-full">Repair & Trust</div>
-              <ArrowDown className="text-slate-600" size={20}/>
-              <div className="bg-slate-800/50 border border-slate-700 px-4 py-2 rounded-lg text-slate-400 text-xs text-center w-full">New Patterns</div>
-              <ArrowDown className="text-slate-600" size={20}/>
+              <div className="bg-white border border-slate-200 px-6 py-3 rounded-xl text-slate-800 font-bold text-center w-full shadow-sm">Reconciliation</div>
+              <ArrowDown className="text-slate-400" size={20}/>
+              <div className="bg-slate-100 border border-slate-200 px-4 py-2 rounded-lg text-slate-600 text-xs text-center w-full">Repair & Trust</div>
+              <ArrowDown className="text-slate-400" size={20}/>
+              <div className="bg-slate-100 border border-slate-200 px-4 py-2 rounded-lg text-slate-600 text-xs text-center w-full">New Patterns</div>
+              <ArrowDown className="text-slate-400" size={20}/>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full mt-4">
-                <div className="bg-emerald-500/10 border border-emerald-500/30 p-2 rounded text-emerald-400 text-[10px] text-center">Healthy Repair</div>
-                <div className="bg-red-500/10 border border-red-500/30 p-2 rounded text-red-400 text-[10px] text-center">Fails Again</div>
+                <div className="bg-emerald-50 border border-emerald-200 p-2 rounded text-emerald-700 text-[10px] text-center font-medium shadow-sm">Healthy Repair</div>
+                <div className="bg-red-50 border border-red-200 p-2 rounded text-red-700 text-[10px] text-center font-medium shadow-sm">Fails Again</div>
               </div>
             </div>
 
