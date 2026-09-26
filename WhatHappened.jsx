@@ -100,7 +100,7 @@ export default function WhatHappened() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-              className="relative hidden lg:block"
+              className="relative mt-12 lg:mt-0"
             >
               {/* Organic Blob Image */}
               <div className="relative mx-auto w-[90%] max-w-[500px] aspect-square ml-auto">
@@ -119,7 +119,7 @@ export default function WhatHappened() {
                 <motion.div 
                   animate={{ y: [0, -10, 0] }} 
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute top-[5%] -left-16 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 max-w-[220px]"
+                  className="absolute top-[5%] -left-4 md:-left-16 bg-white/95 backdrop-blur-sm p-3 md:p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-2 md:gap-3 max-w-[180px] md:max-w-[220px] z-10"
                 >
                   <div className="w-10 h-10 rounded-full bg-blue-50 text-[#0284c7] flex items-center justify-center shrink-0">
                     <BrainCircuit size={20} />
@@ -130,7 +130,7 @@ export default function WhatHappened() {
                 <motion.div 
                   animate={{ y: [0, 10, 0] }} 
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute top-[0%] -right-8 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 max-w-[200px]"
+                  className="absolute top-[0%] -right-4 md:-right-8 bg-white/95 backdrop-blur-sm p-3 md:p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-2 md:gap-3 max-w-[160px] md:max-w-[200px] z-10"
                 >
                   <div className="w-10 h-10 rounded-full bg-rose-50 text-rose-500 flex items-center justify-center shrink-0">
                     <Heart size={20} />
@@ -141,7 +141,7 @@ export default function WhatHappened() {
                 <motion.div 
                   animate={{ y: [0, -8, 0] }} 
                   transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                  className="absolute bottom-[20%] -left-12 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 max-w-[200px]"
+                  className="absolute bottom-[20%] -left-2 md:-left-12 bg-white/95 backdrop-blur-sm p-3 md:p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-2 md:gap-3 max-w-[160px] md:max-w-[200px] z-10"
                 >
                   <div className="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                     <Leaf size={20} />
@@ -152,7 +152,7 @@ export default function WhatHappened() {
                 <motion.div 
                   animate={{ y: [0, 8, 0] }} 
                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                  className="absolute bottom-[25%] -right-12 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 max-w-[220px]"
+                  className="absolute bottom-[25%] -right-4 md:-right-12 bg-white/95 backdrop-blur-sm p-3 md:p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-2 md:gap-3 max-w-[180px] md:max-w-[220px] z-10"
                 >
                   <div className="w-10 h-10 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center shrink-0">
                     <Sun size={20} />
@@ -1439,9 +1439,10 @@ export default function WhatHappened() {
             <SectionHeader num="3" title="How These Things Usually Develop" subtitle="Not a fixed path - it can stop at any point" />
             
             {/* Timeline dots */}
-            <div className="relative py-10 overflow-hidden">
-              <div className="absolute top-1/2 left-8 right-8 h-[2px] bg-gradient-to-r from-white/5 via-white/10 to-[#0284c7]/20 -translate-y-1/2" />
-              <div className="flex items-center justify-between relative z-10 px-4">
+            <div className="relative py-10 overflow-x-auto w-full pb-4">
+              <div className="min-w-[500px] relative">
+                <div className="absolute top-1/2 left-8 right-8 h-[2px] bg-gradient-to-r from-slate-200 via-slate-300 to-[#0284c7]/20 -translate-y-1/2" />
+                <div className="flex items-center justify-between relative z-10 px-4">
                 {[
                   { n: 1, label: "Being around\neach other" },
                   { n: 2, label: "Getting\nfamiliar" },
@@ -1458,6 +1459,7 @@ export default function WhatHappened() {
                     <span className="mt-3 text-[10px] md:text-xs text-slate-500 text-center whitespace-pre-line leading-tight">{s.label}</span>
                   </div>
                 ))}
+                </div>
               </div>
             </div>
 
@@ -1884,7 +1886,9 @@ export default function WhatHappened() {
           <div>
             <SectionHeader num="18" title="The Full Journey at a Glance" subtitle="A simple map to come back to whenever you need it" />
             <div className="overflow-x-auto border border-slate-200 rounded-2xl bg-slate-100/20">
-              <table className="w-full text-left border-collapse min-w-[700px]">
+          <div className="overflow-x-auto w-full pb-4">
+            <div className="min-w-[700px]">
+              <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="border-b border-[#0284c7]/20 bg-[#0284c7]/[0.06]">
                     <th className="p-4 font-bold text-[#0284c7] text-sm">Stage</th>
@@ -1916,6 +1920,8 @@ export default function WhatHappened() {
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </div>
             </div>
           </div>
 
@@ -2942,7 +2948,9 @@ export default function WhatHappened() {
             </motion.div>
 
             <div className="overflow-x-auto border border-slate-200 rounded-3xl bg-slate-50 shadow-2xl">
-              <table className="w-full text-left border-collapse min-w-[700px]">
+          <div className="overflow-x-auto w-full pb-4">
+            <div className="min-w-[700px]">
+              <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="bg-gradient-to-r from-[#0369a1]/10 via-transparent to-[#0f766e]/10">
                     <th className="p-5 font-bold text-[#0369a1] text-sm font-serif border-b border-slate-200">
@@ -2973,6 +2981,8 @@ export default function WhatHappened() {
                   ))}
                 </tbody>
               </table>
+            </div>
+          </div>
             </div>
           </div>
 
