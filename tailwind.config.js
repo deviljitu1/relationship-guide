@@ -6,7 +6,12 @@ export default {
     "./WhatHappened.jsx"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+      }
+    },
   },
   plugins: [],
 }
