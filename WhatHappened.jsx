@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Play, Pause, BookOpen, Volume2, BrainCircuit, Download, X, ArrowDown, ArrowRight, Heart, Eye, MessageSquare, CheckCircle2, Users, Leaf, Sun, List, AlertCircle } from 'lucide-react';
+import { Play, Pause, BookOpen, Volume2, BrainCircuit, Download, X, ArrowDown, ArrowRight, Heart, Eye, MessageSquare, CheckCircle2, Users, Leaf, Sun, List, AlertCircle, Info } from 'lucide-react';
 import AfterTheBreakup from './AfterTheBreakup';
 
 export default function WhatHappened() {
@@ -78,68 +78,21 @@ export default function WhatHappened() {
                 A comprehensive, research-backed guide to understanding what happens when a relationship breaks down, how attractions and emotions evolve, and the emotional realities of what comes after.
               </p>
 
-              <div className="bg-amber-50/80 border border-amber-200/60 rounded-xl p-4 mb-10 flex items-start gap-3 max-w-lg mx-auto lg:mx-0 text-left shadow-sm">
+              <div className="bg-amber-50/80 border border-amber-200/60 rounded-xl p-4 mb-4 flex items-start gap-3 max-w-lg mx-auto lg:mx-0 text-left shadow-sm">
                 <AlertCircle size={20} className="text-amber-600 shrink-0 mt-0.5" />
                 <p className="text-sm text-amber-900/80 leading-relaxed">
                   <strong className="text-amber-700">Important:</strong> Psychology explains possibilities, not certainties. This framework highlights common psychological patterns, but it is not equally applicable to every unique relationship scenario.
                 </p>
               </div>
-              
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
-                <button 
-                  onClick={() => {
-                    const el = document.getElementById('guide-start');
-                    if (el) {
-                      const offset = 80;
-                      const bodyRect = document.body.getBoundingClientRect().top;
-                      const elementRect = el.getBoundingClientRect().top;
-                      const elementPosition = elementRect - bodyRect;
-                      const offsetPosition = elementPosition - offset;
-                      window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                      });
-                    }
-                  }}
-                  className="w-full sm:w-auto bg-[#0284c7] text-white px-8 py-3.5 rounded-full font-medium flex items-center justify-center gap-2 hover:bg-[#0369a1] transition-colors shadow-lg shadow-[#0284c7]/20"
-                >
-                  <BookOpen size={18} />
-                  Start Reading the Guide <ArrowRight size={16} className="ml-1" />
-                </button>
-                <button 
-                  onClick={() => {
-                    const el = document.getElementById('topics-start');
-                    if (el) {
-                      const offset = 80;
-                      const bodyRect = document.body.getBoundingClientRect().top;
-                      const elementRect = el.getBoundingClientRect().top;
-                      const elementPosition = elementRect - bodyRect;
-                      const offsetPosition = elementPosition - offset;
-                      window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                      });
-                    }
-                  }}
-                  className="w-full sm:w-auto bg-white text-slate-700 px-8 py-3.5 rounded-full font-medium flex items-center justify-center gap-2 border border-slate-200 hover:bg-slate-50 transition-colors shadow-sm"
-                >
-                  <List size={18} className="text-[#0284c7]" />
-                  Explore Topics
-                </button>
-              </div>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                <div className="flex -space-x-3">
-                  {['bg-rose-100', 'bg-blue-100', 'bg-emerald-100', 'bg-amber-100', 'bg-purple-100'].map((bg, i) => (
-                    <div key={i} className={`w-10 h-10 rounded-full border-2 border-white flex items-center justify-center ${bg} text-[10px] font-bold text-slate-600 shadow-sm`}>
-                      {['EP', 'SJ', 'JG', 'TL', 'AL'][i]}
-                    </div>
-                  ))}
-                </div>
-                <p className="text-sm text-slate-500 italic max-w-[250px] leading-relaxed text-center sm:text-left">
-                  A clear, compassionate guide for anyone navigating love, loss and new beginnings.
+              <div className="bg-sky-50/80 border border-sky-200/60 rounded-xl p-4 mb-10 flex items-start gap-3 max-w-lg mx-auto lg:mx-0 text-left shadow-sm">
+                <Info size={20} className="text-sky-600 shrink-0 mt-0.5" />
+                <p className="text-sm text-sky-900/80 leading-relaxed">
+                  <strong className="text-sky-700">A Note on Gender:</strong> This guide occasionally uses "she" (e.g., a girlfriend feeling attracted) and "he" (e.g., a boyfriend feeling insecure) as consistent, illustrative examples. However, these psychological dynamics, outside attractions, and emotional responses happen to <strong>both men and women</strong> equally.
                 </p>
               </div>
+              
+
             </motion.div>
 
             {/* Right Column: Image with Floating Bubbles */}
@@ -761,9 +714,7 @@ export default function WhatHappened() {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-[#0284c7]/20 to-[#0284c7]/5 border border-[#0284c7]/20 flex items-center justify-center mb-8">
-              <Eye size={32} strokeWidth={1.2} className="text-[#0284c7]" />
-            </div>
+
             <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-[#0284c7]/70 mb-4">A Different Perspective</p>
             <h2 className="font-serif text-3xl md:text-5xl mb-6 text-slate-800 leading-tight">
               Understanding the<br/>
@@ -2025,9 +1976,7 @@ export default function WhatHappened() {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-[#4f46e5]/20 to-[#4338ca]/10 border border-[#4f46e5]/20 flex items-center justify-center mb-8">
-              <Users size={32} strokeWidth={1.2} className="text-[#4338ca]" />
-            </div>
+
             <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-[#4338ca]/70 mb-4">The Aftermath</p>
             <h2 className="font-serif text-3xl md:text-5xl mb-6 text-slate-800 leading-tight">
               After the Breakup:<br />
